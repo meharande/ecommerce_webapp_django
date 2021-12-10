@@ -1,0 +1,9 @@
+{% include 'main.html'%}
+{% block content %}
+<form method="post" action="{% url 'register' %}">
+  {% csrf_token %}
+  {{form.as_p}}
+  <input type="submit" name="register"/>
+</form>
+
+{% endblock %}
